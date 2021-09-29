@@ -16,29 +16,25 @@
 }
 
 #grid-aside-left {
-    grid-column: 1 / 2;
-    grid-row: 2 / 4;
+    grid-area: 2 / 1 / 4 / 2;
     height: 90vh;
     width: 20vw;
 }
 
 #grid-aside-right {
-    grid-column: 3 / 4;
-    grid-row: 2 / 4;
+    grid-area: 2 / 3 / 4 / 4;
     height: 90vh;
     width: 20vw;
 }
 
 #grid-main {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
+    grid-area: 2 / 2 / 3 / 3;
     height: 80vh;
     width: 60vw;
 }
 
 #grid-footer {
-    grid-column: 2 / 3;
-    grid-row: 3 / 4;
+    grid-area: 3 / 2 / 4 / 3;
     height: 10vh;
     width: 60vw;
 }
