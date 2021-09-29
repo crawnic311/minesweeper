@@ -1,9 +1,9 @@
 .grid {
-    height: 400px;
-    width: 400px;
-    display: flex;
-    flex-wrap: rap;
-    background-color: black;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 2px 2px;
+    background-color: lightgreen;
+    
 }
 
 .grid div {
