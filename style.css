@@ -2,11 +2,46 @@
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 2px 2px;
-    background-color: lightgreen;
-    
+    background-color: lightblue; 
 }
 
-.grid div {
-    height: 40px;
-    width: 40px;
+.grid-item {
+    background: lightpink;
 }
+
+#grid-header {
+    grid-column: 1 / 4;
+    height: 10vh;
+    width: 100vw;
+}
+
+#grid-aside-left {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    height: 90vh;
+    width: 20vw;
+}
+
+#grid-aside-right {
+    grid-column: 3 / 4;
+    grid-row: 2 / 4;
+    height: 90vh;
+    width: 20vw;
+}
+
+#grid-main {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    height: 80vh;
+    width: 60vw;
+}
+
+#grid-footer {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    height: 10vh;
+    width: 60vw;
+}
+
+
+
