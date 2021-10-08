@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="style.css"></head>
         <script src="app.js" charset="utf-8"></script>
     </head>
-    <body>
+    <body class="body">
         <!--Minesweeper game content-->
         <div class="grid">
             <header class="grid-item" id="grid-header">Minesweeper</header>
@@ -22,7 +22,12 @@
                     <button class="left-buttons" id="settings-button">Settings</button>
                 </div>
             </aside>
-            <main class="grid-item" id="grid-main">Minesweeper Window</main>
+            <main class="grid-item" id="grid-main">
+                <div class="indicators" id="mines">Mines</div>
+                <div class="indicators" id="reset"><img src="/Media/mine_smiley.jpeg" class="smiley" id="smiley"></div>
+                <!--Minesweeper Window-->
+                <div class="indicators" id="timer">Timer</div>
+            </main>
             <aside class="grid-item" id="grid-aside-right">Themes/Options</aside>
             <footer class="grid-item" id="grid-footer">Leader Board??</footer>
         </div>
