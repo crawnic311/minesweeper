@@ -4,11 +4,11 @@
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 2px 2px;
-    background-color: lightblue; 
+    background-color:#242325; 
 }
 
 .grid-item {
-    background: lightpink;
+    background: #0B7A75;
 }
 
 #grid-header {
@@ -24,7 +24,7 @@
 }
 
 #grid-aside-left {
-    grid-area: 2 / 1 / 4 / 2;
+    grid-area: 2 / 1 / 5 / 2;
     height: 90vh;
     width: 20vw;
     min-width: 245px;
@@ -32,7 +32,7 @@
 }
 
 #grid-aside-right {
-    grid-area: 2 / 3 / 4 / 4;
+    grid-area: 2 / 3 / 5 / 4;
     height: 90vh;
     width: 20vw;
     min-width: 245px;
@@ -41,20 +41,22 @@
 #grid-main {
     grid-area: 2 / 2 / 3 / 3;
     height: 60vh;
-    min-height: 555px;
+    
     width: 60vw;
     min-width: 900px;
 }
 
 #grid-footer {
-    grid-area: 3 / 2 / 4 / 3;
-    height: 30vh;
+    grid-area: 4 / 2 / 5 / 3;
+    height: 20vh;
     width: 60vw;
     min-width: 900px;
+    
 }
 
 /* Button Positioning */
 #button-div {
+    display: grid;
     height: 50%;  
 }
 
@@ -63,9 +65,9 @@
 
 .left-buttons {
     border: #242325;
-    border-radius: 8px;
+    border-radius: 20px;
     background-color: #F5F5F5;
-    display: block;
+    margin: 10px;
     
     
 
