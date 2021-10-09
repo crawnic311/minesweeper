@@ -1,14 +1,13 @@
 <!DOCTYPE HTML>
 <html lang = "en">
-    <head>
+    <>
         <meta charset="UTF-8">
         <meta 
             name="keywords"
             content="minesweeper, online, games, game, free, fun, brain, brain games"
         />
         <title>Minesweeper</title>
-        <link rel="stylesheet" href="style.css"></head>
-        <script src="app.js" charset="utf-8"></script>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body class="body">
         <!--Minesweeper game content-->
@@ -23,13 +22,21 @@
                 </div>
             </aside>
             <main class="grid-item" id="grid-main">
-                <div class="indicators" id="mines">Mines</div>
-                <div class="indicators" id="reset"><img src="/Media/mine_smiley.jpeg" class="smiley" id="smiley"></div>
-                <!--Minesweeper Window-->
-                <div class="indicators" id="timer">Timer</div>
+                <div id="main-header">
+                    <div class="indicators" id="mines">Mines</div>
+                    <div class="indicators" id="reset"><img src="/Media/mine_smiley.jpeg" class="smiley" id="smiley"></div>
+                    <!--Minesweeper Window-->
+                    <div class="indicators" id="timer">Timer</div>
+                </div>
+                <dive class="beginner-grid">
+                    <div></div>
+                </div>
             </main>
             <aside class="grid-item" id="grid-aside-right">Themes/Options</aside>
             <footer class="grid-item" id="grid-footer">Leader Board??</footer>
         </div>
+
+        <script src="/app.js" charset="utf-8"></script>
+
     </body>
 </html>
