@@ -1,39 +1,10 @@
-//Timer
+let beginnerBtn = document.getElementById('#beginner-button')
+console.log(beginnerBtn)
+beginnerBtn.addEventListener('click', changeColor)
 
-//Beginner Grid
-const beginnerGrid = document.querySelector('.beginner-grid')
-let width = 9
-let window = []
-
-//create window 
-function createWindow(event) {
-    for(let i = 0; i < width*width; i++) {
-        const square = document.createElement('div')
-        square.setAttribute('id', i)
-        beginnerGrid.appendChild(square)
-        window.push(square)
-    }
+function changeColor(event) {
+    let intBtn = document.getElementById('#intermediate-button')
+    intBtn.style.backgroundColor = 'black'
 }
 
-const beginnerButton = document.getElementById('#beginner-button')
-beginnerButton.addEventListener('click', testColor())
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+changeColor()
