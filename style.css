@@ -102,7 +102,7 @@
 
 
 /* Beginner grid dimensions and sytling */
-.beginner-grid {
+.gridM {
     width: 360px;
     height: 360px;
     display: flex;
@@ -110,7 +110,7 @@
     background-color: gray;
 }
 
-.beginner-grid div {
+.gridM div {
     width: 40px;
     height: 40px;
 }
