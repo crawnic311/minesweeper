@@ -9,9 +9,26 @@ let width = 9
 let squares = []
 let bombs = 20
 let isGamerOver = false
+let flags = 0
 
 
 function createGrid() {
+
+    //add Flag with right click
+    function addFlag(gridChild) {
+    if(isGamerOver) return
+    if(!gridChild.classList.contains('checked') && (flags < bombs)) {
+        if(gridChild.classList.contains('flag')) {
+            gridChild.classList.add('flag')
+            gridChild.innerHTML = '🚩'
+            flags ++
+        } else {
+            gridChild.classList.remove('flag')
+            gridChild.innerHTML = ''
+            flags --
+        }
+    }
+}
     beginnerBtn.disabled = true
     const bombsArr = Array(bombs).fill('bomb')
     const emptyArr = Array(width * width - bombs).fill('valid')
@@ -30,6 +47,12 @@ function createGrid() {
         gridChild.addEventListener('click', function(e) {
             click(gridChild)
         })
+
+        //control and left click
+        gridChild.oncontextmenu = function(e) {
+            e.preventDefault()
+            addFlag(gridChild)
+        }
     }
 
 // add numbers
@@ -56,7 +79,7 @@ function createGrid() {
             //Bottom
             if(i < 71 && squares[i + width].classList.contains('bomb')) total ++
             squares[i].setAttribute('data', total)
-            console.log(squares[i])
+            
         }
     }
     
@@ -70,9 +93,8 @@ function click(gridChild) {
     let currentId = gridChild.id
     if(isGamerOver) return
     if(gridChild.classList.contains('checked') || gridChild.classList.contains('flag')) return
-    if (gridChild.classList.contains('bomb')) {
-        //alert('Game over')
-        console.log("Game Over")
+    if(gridChild.classList.contains('bomb')) {
+        gameOver(gridChild)
     } else {
         let total = gridChild.getAttribute('data')
         if(total !=0) {
@@ -86,7 +108,7 @@ function click(gridChild) {
 }
 
 //Checking surrounding squares after square is clicked
-function checkGridChild(square, currentId) {
+function checkGridChild(gridChild, currentId) {
     const isLeftEdge = (currentId % width === 0)
     const isRightEdge = (currentId % width === width -1)
 
@@ -133,4 +155,17 @@ function checkGridChild(square, currentId) {
         }
 
     }, 10)
+}
+
+//game over
+function gameOver(gridChild) {
+    console.log("Game Over Loser!")
+    isGamerOver = true
+
+    //show All bombs
+    squares.forEach(square => {
+        if(square.classList.contains('bomb')) {
+            square.innerHTML = '💣'
+        }
+    })
 }
