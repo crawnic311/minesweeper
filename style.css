@@ -121,3 +121,11 @@
 }
 
 /* Bombs */
+.bomb {
+    background-color: orange;
+}
+
+/*Checked*/
+.checked {
+    background-color: blueviolet;
+}
