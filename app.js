@@ -11,6 +11,10 @@ let bombs = 20
 let isGamerOver = false
 let flags = 0
 let checked = 0
+let mines = document.getElementById('mines')
+let timer = document.getElementById('timer')
+let timerVar = setInterval(timerStart, 1000);
+let totalSeconds = 0;
 
 
 function createGrid() {
@@ -23,11 +27,13 @@ function createGrid() {
             square.classList.add('flag')
             square.innerHTML = '🚩'
             flags ++
+            minesRemaining()
             checkForWin()
         } else {
             square.classList.remove('flag')
             square.innerHTML = ''
             flags --
+            minesRemaining()
         }
     }
 }
@@ -92,17 +98,18 @@ function createGrid() {
 
 
 function click(square) {
+
     let currentId = square.id
     if(isGamerOver) return
     if(square.classList.contains('checked') || square.classList.contains('flag')) return
     if(square.classList.contains('bomb')) {
         gameOver(square)
     } else {
+        minesRemaining()
         let total = square.getAttribute('data')
         if(total !=0) {
             square.classList.add('checked')
             checked ++
-            console.log(checked)
             square.innerHTML = total
             checkForWin()
             return
@@ -136,7 +143,7 @@ function checkSquare(square, currentId) {
             const newSquare = document.getElementById(newId)
             click(newSquare)
         }
-        if(currentId > 10) {
+        if(currentId > 10 && !isLeftEdge) {
             const newId = squares[parseInt(currentId) - 1 - width].id
             const newSquare = document.getElementById(newId)
             click(newSquare)
@@ -188,8 +195,29 @@ function checkForWin() {
         }
         if(matches === bombs || checked === width * width - bombs) {
             console.log('You won')
+              //Flag all bombs
+            squares.forEach(square => {
+                if(square.classList.contains('bomb')) {
+                    square.innerHTML = '🚩'
+                }
+            })
             isGamerOver = true
         }
    
     }
+}
+
+//Mine Counter Initialization
+function minesRemaining() {
+     mines.textContent = bombs - flags
+}
+
+//Timer Initialization
+function timerStart() {
+    ++totalSeconds
+    var seconds = totalSeconds 
+
+    if(seconds < 10)
+       seconds = "00"+seconds
+    timer.innerHTML = seconds
 }

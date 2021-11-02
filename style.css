@@ -78,49 +78,56 @@
 /* Inidcator Placement */
 #mines {
     float: left;
+    height: 21px;
+    width: 58px;
     margin: 1px;
-    font: 15px roboto, sans-serif;
+    font: 20px roboto, sans-serif;
+    font-weight: 400;
+    text-align: center;
+    padding: 8px 0;
     background-color: red;
-    padding: 10px;
 }
 
 #timer {
     float: right;
+    height: 21px;
+    width: 58px;
     margin: 1px;
-    font: 15px roboto, sans-serif;
+    font: 20px roboto, sans-serif;
+    font-weight: 400;
+    text-align: center;
+    padding: 8px 0;
     background-color: red;
-    padding: 10px;
+   
 }
 
 /* Smiley */
 #smiley {
     width: 37px;
     height: 37px;
-    margin: 1px;
-    
+    margin-left: 370px;
 }
 
 
 /* Beginner grid dimensions and sytling */
 .gridM {
-    width: 360px;
-    height: 360px;
+    width: 324px;
+    height: 324px;
     display: flex;
     flex-wrap: wrap;
     background-color: gray;
-    margin: auto;
-}
-
-.gridM div {
-    width: 40px;
-    height: 40px;
+    margin: 20px auto;
     
 }
 
-/* Test */
-#button {
-    background-color: chartreuse;
+.gridM div {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #C0C0C0;
+    margin: 1px;
+    
 }
+
 
 /* Bombs */
 .bomb {
