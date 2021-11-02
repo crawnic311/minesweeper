@@ -10,6 +10,7 @@ let squares = []
 let bombs = 20
 let isGamerOver = false
 let flags = 0
+let checked = 0
 
 
 function createGrid() {
@@ -22,6 +23,7 @@ function createGrid() {
             square.classList.add('flag')
             square.innerHTML = '🚩'
             flags ++
+            checkForWin()
         } else {
             square.classList.remove('flag')
             square.innerHTML = ''
@@ -99,24 +101,30 @@ function click(square) {
         let total = square.getAttribute('data')
         if(total !=0) {
             square.classList.add('checked')
+            checked ++
+            console.log(checked)
             square.innerHTML = total
+            checkForWin()
             return
         }
-        checkGridChild(square, currentId)
+        checkSquare(square, currentId)
     }
     square.classList.add('checked')
 }
 
 //Checking surrounding squares after square is clicked
-function checkGridChild(square, currentId) {
+function checkSquare(square, currentId) {
     const isLeftEdge = (currentId % width === 0)
     const isRightEdge = (currentId % width === width -1)
+    checked ++
+    checkForWin()
 
     setTimeout(() => {
         if(currentId > 0 && !isLeftEdge) {
             const newId = squares[parseInt(currentId) - 1].id
             const newSquare = document.getElementById(newId)
             click(newSquare, newId)
+            
         }
         if(currentId > 8 && !isRightEdge) {
             const newId = squares[parseInt(currentId) + 1 - width].id
@@ -168,4 +176,20 @@ function gameOver(square) {
             square.innerHTML = '💣'
         }
     })
+}
+
+//Check for Win Function
+function checkForWin() {
+    let matches = 0
+
+    for(let i = 0; i < squares.length; i++) {
+        if(squares[i].classList.contains('flag') && squares[i].classList.contains('bomb')) {
+            matches ++
+        }
+        if(matches === bombs || checked === width * width - bombs) {
+            console.log('You won')
+            isGamerOver = true
+        }
+   
+    }
 }
