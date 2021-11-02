@@ -15,16 +15,16 @@ let flags = 0
 function createGrid() {
 
     //add Flag with right click
-    function addFlag(gridChild) {
+    function addFlag(square) {
     if(isGamerOver) return
-    if(!gridChild.classList.contains('checked') && (flags < bombs)) {
-        if(gridChild.classList.contains('flag')) {
-            gridChild.classList.add('flag')
-            gridChild.innerHTML = '🚩'
+    if(!square.classList.contains('checked') && (flags < bombs)) {
+        if(!square.classList.contains('flag')) {
+            square.classList.add('flag')
+            square.innerHTML = '🚩'
             flags ++
         } else {
-            gridChild.classList.remove('flag')
-            gridChild.innerHTML = ''
+            square.classList.remove('flag')
+            square.innerHTML = ''
             flags --
         }
     }
@@ -37,21 +37,21 @@ function createGrid() {
     console.log(shuffledArr)
 
     for(let i = 0; i < width * width; i++) {
-        const gridChild = document.createElement('div')
-        gridChild.setAttribute('id', i)
-        gridChild.classList.add(shuffledArr[i])
-        grid.appendChild(gridChild)
-        squares.push(gridChild)
+        const square = document.createElement('div')
+        square.setAttribute('id', i)
+        square.classList.add(shuffledArr[i])
+        grid.appendChild(square)
+        squares.push(square)
 
         //normal click
-        gridChild.addEventListener('click', function(e) {
-            click(gridChild)
+        square.addEventListener('click', function(e) {
+            click(square)
         })
 
         //control and left click
-        gridChild.oncontextmenu = function(e) {
+        square.oncontextmenu = function(e) {
             e.preventDefault()
-            addFlag(gridChild)
+            addFlag(square)
         }
     }
 
@@ -89,26 +89,26 @@ function createGrid() {
 
 
 
-function click(gridChild) {
-    let currentId = gridChild.id
+function click(square) {
+    let currentId = square.id
     if(isGamerOver) return
-    if(gridChild.classList.contains('checked') || gridChild.classList.contains('flag')) return
-    if(gridChild.classList.contains('bomb')) {
-        gameOver(gridChild)
+    if(square.classList.contains('checked') || square.classList.contains('flag')) return
+    if(square.classList.contains('bomb')) {
+        gameOver(square)
     } else {
-        let total = gridChild.getAttribute('data')
+        let total = square.getAttribute('data')
         if(total !=0) {
-            gridChild.classList.add('checked')
-            gridChild.innerHTML = total
+            square.classList.add('checked')
+            square.innerHTML = total
             return
         }
-        checkGridChild(gridChild, currentId)
+        checkGridChild(square, currentId)
     }
-    gridChild.classList.add('checked')
+    square.classList.add('checked')
 }
 
 //Checking surrounding squares after square is clicked
-function checkGridChild(gridChild, currentId) {
+function checkGridChild(square, currentId) {
     const isLeftEdge = (currentId % width === 0)
     const isRightEdge = (currentId % width === width -1)
 
@@ -158,7 +158,7 @@ function checkGridChild(gridChild, currentId) {
 }
 
 //game over
-function gameOver(gridChild) {
+function gameOver(square) {
     console.log("Game Over Loser!")
     isGamerOver = true
 
