@@ -2,19 +2,20 @@
 const beginnerBtn = document.getElementById('beginner-button')
 
 beginnerBtn.addEventListener('click', createGrid)
+beginnerBtn.addEventListener('click', minesRemaining)
 
 
 const grid = document.getElementById('gridM')
 let width = 9
 let squares = []
 let bombs = 20
-let isGamerOver = false
+let isGamerOver = false 
 let flags = 0
 let checked = 0
 let mines = document.getElementById('mines')
 let timer = document.getElementById('timer')
-let timerVar = setInterval(timerStart, 1000);
 let totalSeconds = 0;
+let timestarted = false
 
 
 function createGrid() {
@@ -98,6 +99,9 @@ function createGrid() {
 
 
 function click(square) {
+   
+    //Start timer
+    let timerVar = setInterval(timerStart, 1000);
 
     let currentId = square.id
     if(isGamerOver) return
@@ -130,7 +134,7 @@ function checkSquare(square, currentId) {
         if(currentId > 0 && !isLeftEdge) {
             const newId = squares[parseInt(currentId) - 1].id
             const newSquare = document.getElementById(newId)
-            click(newSquare, newId)
+            click(newSquare)
             
         }
         if(currentId > 8 && !isRightEdge) {
@@ -153,12 +157,12 @@ function checkSquare(square, currentId) {
             const newSquare = document.getElementById(newId)
             click(newSquare)
         }
-        if(currentId < 72 && isLeftEdge) {
+        if(currentId < 72 && !isLeftEdge) {
             const newId = squares[parseInt(currentId) - 1 + width].id
             const newSquare = document.getElementById(newId)
             click(newSquare)
         }
-        if(currentId < 70 && isRightEdge) {
+        if(currentId < 70 && !isRightEdge) {
            const newId = squares[parseInt(currentId) + 1 + width].id
            const newSquare = document.getElementById(newId)
            click(newSquare)
@@ -214,10 +218,13 @@ function minesRemaining() {
 
 //Timer Initialization
 function timerStart() {
+    
     ++totalSeconds
     var seconds = totalSeconds 
 
     if(seconds < 10)
        seconds = "00"+seconds
     timer.innerHTML = seconds
+    timestarted = true
+    
 }
