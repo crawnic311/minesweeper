@@ -238,9 +238,6 @@ function resetGrid() {
        let deleteSquare = document.getElementById(i)
        deleteSquare.parentNode.removeChild(deleteSquare) 
     }
-    
-    //squares = 0
-    //console.log(squares)
 
     createGrid()
 }
