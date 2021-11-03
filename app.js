@@ -1,8 +1,10 @@
 
 const beginnerBtn = document.getElementById('beginner-button')
+const smileyReset = document.getElementById('smiley')
 
 beginnerBtn.addEventListener('click', createGrid)
 beginnerBtn.addEventListener('click', minesRemaining)
+smileyReset.addEventListener('click', resetGrid)
 
 
 const grid = document.getElementById('gridM')
@@ -16,6 +18,7 @@ let mines = document.getElementById('mines')
 let timer = document.getElementById('timer')
 let totalSeconds = 0;
 let timestarted = false
+
 
 
 function createGrid() {
@@ -228,3 +231,12 @@ function timerStart() {
     timestarted = true
     
 }
+
+function resetGrid() {
+    //delete existing grid
+    for(let i = 0; i < )
+
+
+    createGrid()
+}
+
