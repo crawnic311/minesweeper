@@ -16,7 +16,7 @@ let flags = 0
 let checked = 0
 let mines = document.getElementById('mines')
 let timer = document.getElementById('timer')
-let totalSeconds = 0;
+let totalSeconds = 0
 let timestarted = false
 
 
@@ -232,11 +232,15 @@ function timerStart() {
     
 }
 
-function resetGrid() {
-    //delete existing grid
-    for(let i = 0; i < )
 
+function resetGrid() {
+    for(let i = 0; i < width * width; i++) {
+       let deleteSquare = document.getElementById(i)
+       deleteSquare.parentNode.removeChild(deleteSquare) 
+    }
+    
+    //squares = 0
+    //console.log(squares)
 
     createGrid()
 }
-
