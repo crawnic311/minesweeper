@@ -17,8 +17,9 @@ let checked = 0
 let mines = document.getElementById('mines')
 let timer = document.getElementById('timer')
 let totalSeconds = 0
-let timestarted = false
+let timeStarted = false
 let matches = 0
+let timerVar = 0
 
 
 
@@ -105,7 +106,11 @@ function createGrid() {
 function click(square) {
    
     //Start timer
-    let timerVar = setInterval(timerStart, 1000);
+    if(timeStarted === false) {
+        timerVar = setInterval(timerStart, 1000);
+        timeStarted = true
+    }
+    
 
     let currentId = square.id
     if(isGamerOver) return
@@ -242,5 +247,10 @@ function resetGrid() {
     squares = []
     matches = 0
     checked = 0
+    timeStarted = false
+    totalSeconds = 0
+    clearInterval(timerVar)
+    timer.innerHTML = "000"
     createGrid()
 }
+
