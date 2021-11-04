@@ -18,6 +18,7 @@ let mines = document.getElementById('mines')
 let timer = document.getElementById('timer')
 let totalSeconds = 0
 let timestarted = false
+let matches = 0
 
 
 
@@ -194,7 +195,7 @@ function gameOver(square) {
 
 //Check for Win Function
 function checkForWin() {
-    let matches = 0
+    //let matches = 0
 
     for(let i = 0; i < squares.length; i++) {
         if(squares[i].classList.contains('flag') && squares[i].classList.contains('bomb')) {
@@ -238,6 +239,8 @@ function resetGrid() {
        let deleteSquare = document.getElementById(i)
        deleteSquare.parentNode.removeChild(deleteSquare) 
     }
-
+    squares = []
+    matches = 0
+    checked = 0
     createGrid()
 }
