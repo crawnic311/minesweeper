@@ -196,6 +196,7 @@ function gameOver(square) {
             square.innerHTML = '💣'
         }
     })
+    clearInterval(timerVar)
 }
 
 //Check for Win Function
@@ -207,7 +208,8 @@ function checkForWin() {
             matches ++
         }
         if(matches === bombs || checked === width * width - bombs) {
-            console.log('You won')
+            //console.log('You won')
+            alert("You Won!")
               //Flag all bombs
             squares.forEach(square => {
                 if(square.classList.contains('bomb')) {
@@ -251,6 +253,7 @@ function resetGrid() {
     totalSeconds = 0
     clearInterval(timerVar)
     timer.innerHTML = "000"
+    flags = 0
     createGrid()
 }
 

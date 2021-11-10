@@ -103,9 +103,9 @@
 
 /* Smiley */
 #smiley {
-    width: 37px;
-    height: 37px;
+    font-size: 25px;
     margin-left: 370px;
+    background-color:  #c0c0c0;
 }
 
 
@@ -139,6 +139,11 @@
 /*Checked*/
 .checked {
     background-color: blueviolet;
+    text-align: center;
+    
+}
+
+.flagged {
     text-align: center;
     vertical-align: middle;
 }
