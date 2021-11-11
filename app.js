@@ -20,6 +20,7 @@ let totalSeconds = 0
 let timeStarted = false
 let matches = 0
 let timerVar = 0
+let smiley = document.getElementById('smiley')
 
 
 
@@ -196,6 +197,7 @@ function gameOver(square) {
             square.innerHTML = '💣'
         }
     })
+    smiley.textContent = "😵"
     clearInterval(timerVar)
 }
 
@@ -217,6 +219,7 @@ function checkForWin() {
                 }
             })
             isGamerOver = true
+            smiley.innerText = "😎"
         }
    
     }
@@ -254,6 +257,8 @@ function resetGrid() {
     clearInterval(timerVar)
     timer.innerHTML = "000"
     flags = 0
+    smiley.innerText = "🙂"
+    isGamerOver = false
     createGrid()
 }
 
