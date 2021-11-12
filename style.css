@@ -76,8 +76,14 @@
 }
 
 /* Inidcator Placement */
+#main-header {
+    display: flex;
+    vertical-align: top;
+    justify-content: space-between;
+}
+
+
 #mines {
-    float: left;
     height: 21px;
     width: 58px;
     margin: 1px;
@@ -89,7 +95,6 @@
 }
 
 #timer {
-    float: right;
     height: 21px;
     width: 58px;
     margin: 1px;
@@ -104,7 +109,6 @@
 /* Smiley */
 #smiley {
     font-size: 25px;
-    margin-left: 370px;
     background-color:  #c0c0c0;
 }
 
