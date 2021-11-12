@@ -115,21 +115,23 @@
 
 /* Beginner grid dimensions and sytling */
 .gridM {
-    width: 324px;
-    height: 324px;
+    width: 378px;
+    height: 378px;
     display: flex;
     flex-wrap: wrap;
-    background-color: gray;
+    background-color: #C0C0C0;
     margin: 20px auto;
+    
     
 }
 
 .gridM div {
     width: 30px;
     height: 30px;
-    border: 2px solid #C0C0C0;
     margin: 1px;
     align-items: center;
+    border: 5px solid;
+    border-color: #E8E8E8 #ABABAB #ABABAB #D4D4D4;
    
 }
 
