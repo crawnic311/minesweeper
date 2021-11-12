@@ -36,6 +36,7 @@ function createGrid() {
             flags ++
             minesRemaining()
             checkForWin()
+            console.log(matches)
         } else {
             square.classList.remove('flag')
             square.innerHTML = ''
@@ -203,27 +204,29 @@ function gameOver(square) {
 
 //Check for Win Function
 function checkForWin() {
-    //let matches = 0
+    matches = 0
 
     for(let i = 0; i < squares.length; i++) {
         if(squares[i].classList.contains('flag') && squares[i].classList.contains('bomb')) {
-            matches ++
+            matches++
         }
+    }
         if(matches === bombs || checked === width * width - bombs) {
             //console.log('You won')
-            alert("You Won!")
+            isGamerOver = true
+            smiley.innerText = "😎"
+            console.log("You Won!")
               //Flag all bombs
             squares.forEach(square => {
                 if(square.classList.contains('bomb')) {
                     square.innerHTML = '🚩'
                 }
             })
-            isGamerOver = true
-            smiley.innerText = "😎"
+            
         }
    
-    }
 }
+
 
 //Mine Counter Initialization
 function minesRemaining() {
