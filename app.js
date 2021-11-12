@@ -1,3 +1,6 @@
+//Shouldn't be able to win on flags alone
+
+
 
 const beginnerBtn = document.getElementById('beginner-button')
 const smileyReset = document.getElementById('smiley')

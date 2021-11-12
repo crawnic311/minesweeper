@@ -129,7 +129,8 @@
     height: 30px;
     border: 2px solid #C0C0C0;
     margin: 1px;
-    
+    align-items: center;
+   
 }
 
 
@@ -147,7 +148,13 @@
     
 }
 
+.valid {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+}
+
 .flagged {
     text-align: center;
-    vertical-align: middle;
 }
