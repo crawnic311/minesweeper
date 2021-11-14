@@ -131,8 +131,12 @@
     margin: 1px;
     align-items: center;
     border: 5px solid;
-    border-color: #E8E8E8 #ABABAB #ABABAB #D4D4D4;
+    border-color: #D4D4D4 #ABABAB #ABABAB #D4D4D4;
    
+}
+
+div .checked {
+    border-color: #b0b0b0;
 }
 
 
@@ -147,6 +151,7 @@
 .checked {
     background-color: #b0b0b0;
     text-align: center;
+    
     
 }
 
