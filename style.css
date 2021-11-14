@@ -145,7 +145,7 @@
 
 /*Checked*/
 .checked {
-    background-color: blueviolet;
+    background-color: #b0b0b0;
     text-align: center;
     
 }
@@ -159,4 +159,52 @@
 
 .flagged {
     text-align: center;
+}
+
+.one {
+    color: #1717f8;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.two {
+    color: #3e8937;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.three {
+    color: #f82e27;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.four {
+    color: #29298a;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.five {
+    color: #831f1b;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.six {
+    color: #007c7d;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.seven {
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.eight {
+    color: #565656;
+    font-weight: bold;
+    font-size: 20px;
 }
