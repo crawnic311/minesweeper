@@ -1,5 +1,7 @@
 //add grid border
 //Make create grid it's own file and import it?
+//Stop timer when you win
+//add alert win message
 
 
 
@@ -14,7 +16,7 @@ smileyReset.addEventListener('click', resetGrid)
 const grid = document.getElementById('gridM')
 let width = 9
 let squares = []
-let bombs = 10
+let bombs = 30
 let isGamerOver = false 
 let flags = 0
 let checked = 0
@@ -95,9 +97,9 @@ function createGrid() {
             //Bottom/Left
             if(i < 72 && !isLeftEdge && squares[i - 1 + width].classList.contains('bomb')) total ++
             //Bottom/Right
-            if(i < 70 && !isRightEdge && squares[i + 1 + width].classList.contains('bomb')) total ++
+            if(i < 71 && !isRightEdge && squares[i + 1 + width].classList.contains('bomb')) total ++
             //Bottom
-            if(i < 71 && squares[i + width].classList.contains('bomb')) total ++
+            if(i < 72 && squares[i + width].classList.contains('bomb')) total ++
             squares[i].setAttribute('data', total)
             
         }
