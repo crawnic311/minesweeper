@@ -116,24 +116,26 @@
 
 /* Beginner grid dimensions and sytling */
 .gridM {
-    width: 378px;
-    height: 378px;
+    width: 189px;
+    height: 189px;
     display: flex;
     flex-wrap: wrap;
     background-color: #C0C0C0;
     margin: 20px auto;
     border: 10px solid;
     border-color: #C0C0C0;
+    font-weight: bold;
+    font-size: 16px;
     
     
 }
 
 .gridM div {
-    width: 30px;
-    height: 30px;
+    width: 17px;
+    height: 17px;
     margin: 1px;
     align-items: center;
-    border: 5px solid;
+    border: 1px solid;
     border-color: #D4D4D4 #ABABAB #ABABAB #D4D4D4;
    
 }
@@ -144,9 +146,11 @@ div .checked {
 
 
 /* Bombs */
-.bomb {
+.bomb, .flagged {
     background-color: orange;
     text-align: center;
+    font-weight: normal;
+    font-size: 10px;
 }
 
 
@@ -154,65 +158,47 @@ div .checked {
 .checked {
     background-color: #b0b0b0;
     text-align: center;
-    
-    
 }
 
 .valid {
     text-align: center;
     display: flex;
     justify-content: center;
-
 }
 
 .flagged {
     text-align: center;
+    font-weight: normal;
 }
 
 .one {
     color: #1717f8;
-    font-weight: bold;
-    font-size: 20px;
 }
 
 .two {
     color: #3e8937;
-    font-weight: bold;
-    font-size: 20px;
 }
 
 .three {
     color: #f82e27;
-    font-weight: bold;
-    font-size: 20px;
 }
 
 .four {
     color: #29298a;
-    font-weight: bold;
-    font-size: 20px;
 }
 
 .five {
     color: #831f1b;
-    font-weight: bold;
-    font-size: 20px;
 }
 
 .six {
     color: #007c7d;
-    font-weight: bold;
-    font-size: 20px;
 }
 
 .seven {
     color: #000000;
-    font-weight: bold;
-    font-size: 20px;
 }
 
 .eight {
     color: #565656;
-    font-weight: bold;
-    font-size: 20px;
 }

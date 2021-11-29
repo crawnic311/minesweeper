@@ -1,7 +1,7 @@
 //add grid border
-//Make create grid it's own file and import it?
-//Stop timer when you win
-//add alert win message
+//Make intermediate Grid funcitonal
+//Begginner grid loads by default
+//Simplify CSS Font sizes and styling for mine numbers
 
 
 
@@ -16,7 +16,7 @@ smileyReset.addEventListener('click', resetGrid)
 const grid = document.getElementById('gridM')
 let width = 9
 let squares = []
-let bombs = 1
+let bombs = 5
 let isGamerOver = false 
 let flags = 0
 let checked = 0
@@ -230,7 +230,6 @@ function checkForWin() {
             isGamerOver = true
             smiley.innerText = "😎"
             clearInterval(timerVar)
-            console.log("You Won!")
               //Flag all bombs
             squares.forEach(square => {
                 if(square.classList.contains('bomb')) {
