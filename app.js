@@ -16,7 +16,7 @@ smileyReset.addEventListener('click', resetGrid)
 const grid = document.getElementById('gridM')
 let width = 9
 let squares = []
-let bombs = 30
+let bombs = 1
 let isGamerOver = false 
 let flags = 0
 let checked = 0
@@ -229,6 +229,7 @@ function checkForWin() {
             //console.log('You won')
             isGamerOver = true
             smiley.innerText = "😎"
+            clearInterval(timerVar)
             console.log("You Won!")
               //Flag all bombs
             squares.forEach(square => {
