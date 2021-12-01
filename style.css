@@ -87,13 +87,14 @@
 #mines, #timer {
     height: 21px;
     width: 58px;
-    margin: 1px;
-    font: 20px roboto, sans-serif;
+    margin: 0px;
+    font: 25px arial, sans-serif;
     font-weight: 400;
     color: #db0203;
     text-align: center;
     padding: 8px 0;
     background-color: #230302;
+    letter-spacing: 3px;
 }
 
 

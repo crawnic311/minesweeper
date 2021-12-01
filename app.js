@@ -4,6 +4,7 @@
 //Simplify CSS Font sizes and styling for mine numbers
 //Indicators always display 3 digits
 //Padding between indicator numbers
+//Font looks like timer and digitized
 
 
 
@@ -246,6 +247,8 @@ function checkForWin() {
 
 //Mine Counter Initialization
 function minesRemaining() {
+    let minesRemain = bombs - flags
+    let minesPrecise = minesRemain.toPrecision()
      mines.textContent = bombs - flags
 }
 
