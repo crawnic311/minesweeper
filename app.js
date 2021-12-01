@@ -2,6 +2,8 @@
 //Make intermediate Grid funcitonal
 //Begginner grid loads by default
 //Simplify CSS Font sizes and styling for mine numbers
+//Indicators always display 3 digits
+//Padding between indicator numbers
 
 
 

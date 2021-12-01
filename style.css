@@ -84,28 +84,18 @@
 }
 
 
-#mines {
+#mines, #timer {
     height: 21px;
     width: 58px;
     margin: 1px;
     font: 20px roboto, sans-serif;
     font-weight: 400;
+    color: #db0203;
     text-align: center;
     padding: 8px 0;
-    background-color: red;
+    background-color: #230302;
 }
 
-#timer {
-    height: 21px;
-    width: 58px;
-    margin: 1px;
-    font: 20px roboto, sans-serif;
-    font-weight: 400;
-    text-align: center;
-    padding: 8px 0;
-    background-color: red;
-   
-}
 
 /* Smiley */
 #smiley {
