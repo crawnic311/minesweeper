@@ -21,7 +21,7 @@ smileyReset.addEventListener('click', resetGrid)
 const grid = document.getElementById('gridM')
 let width = 9
 let squares = []
-let bombs = 5
+let bombs = 10
 let isGamerOver = false 
 let flags = 0
 let checked = 0
