@@ -132,7 +132,6 @@ div .checked {
 /* Bombs */
 .bomb,
 .flagged {
-  background-color: orange;
   text-align: center;
   font-weight: normal;
   font-size: 10px;
