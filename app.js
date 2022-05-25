@@ -5,7 +5,6 @@
 //Indicators always display 3 digits
 //Padding between indicator numbers
 //Font looks like timer and digitized
-// does git work?
 
 const beginnerBtn = document.getElementById('beginner-button')
 //const intermediateBtn = document.getElementById('intermediate-button')
