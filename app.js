@@ -35,7 +35,6 @@ let timerVar = 0
 let smiley = document.getElementById('smiley')
 
 function createGrid() {
-  //add Flag with right click
   function addFlag(square) {
     if (isGamerOver) return
     if (!square.classList.contains('checked') && flags < bombs) {
@@ -55,6 +54,9 @@ function createGrid() {
     }
   }
   //add switch statement here
+if ()
+
+
   beginnerBtn.disabled = true
   const bombsArr = Array(bombs).fill('bomb')
   const emptyArr = Array(width * width - bombs).fill('valid')
