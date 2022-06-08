@@ -54,9 +54,6 @@ function createGrid() {
     }
   }
   //add switch statement here
-if ()
-
-
   beginnerBtn.disabled = true
   const bombsArr = Array(bombs).fill('bomb')
   const emptyArr = Array(width * width - bombs).fill('valid')
