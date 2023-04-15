@@ -1,0 +1,187 @@
+/* Body Color */
+.body {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 2px 2px;
+  background-color: #0b7a75;
+}
+
+/* Grid Parameters */
+.grid {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 2px 2px;
+  background-color: #242325;
+}
+
+.grid-item {
+  background: #0b7a75;
+}
+
+#grid-header {
+  grid-column: 1 / 4;
+  height: 10vh;
+  width: 100vw;
+  min-width: 100%;
+  text-align: center;
+  line-height: 13vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+#grid-aside-left {
+  grid-area: 2 / 1 / 5 / 2;
+  height: 90vh;
+  width: 20vw;
+  min-width: 245px;
+}
+
+#grid-aside-right {
+  grid-area: 2 / 3 / 5 / 4;
+  height: 90vh;
+  width: 20vw;
+  min-width: 245px;
+}
+
+#grid-main {
+  grid-area: 2 / 2 / 3 / 3;
+  height: 60vh;
+  width: 60vw;
+  min-width: 900px;
+}
+
+#grid-footer {
+  grid-area: 4 / 2 / 5 / 3;
+  height: 20vh;
+  width: 60vw;
+  min-width: 900px;
+}
+
+/* Button Positioning */
+#button-div {
+  display: grid;
+  height: 50%;
+}
+
+/* Button Styling */
+
+.left-buttons {
+  border: #242325;
+  border-radius: 20px;
+  background-color: #c0c0c0;
+  margin: 10px;
+  font: 18px roboto, sans-serif;
+}
+
+/* Inidcator Placement */
+#main-header {
+  display: flex;
+  vertical-align: top;
+  justify-content: space-between;
+}
+
+#mines,
+#timer {
+  height: 21px;
+  width: 58px;
+  margin: 0px;
+  font: 25px arial, sans-serif;
+  font-weight: 400;
+  color: #db0203;
+  text-align: center;
+  padding: 8px 0;
+  background-color: #230302;
+  letter-spacing: 3px;
+}
+
+/* Smiley */
+#smiley {
+  font-size: 25px;
+  background-color: #c0c0c0;
+}
+
+/* Beginner grid dimensions and sytling */
+.gridM {
+  width: 189px;
+  height: 189px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #c0c0c0;
+  margin: 20px auto;
+  border: 10px solid;
+  border-color: #c0c0c0;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.gridM div {
+  width: 17px;
+  height: 17px;
+  margin: 1px;
+  align-items: center;
+  border: 1px solid;
+  border-color: #d4d4d4 #ababab #ababab #d4d4d4;
+}
+
+div .checked {
+  border-color: #b0b0b0;
+}
+
+/* Bombs */
+.bomb,
+.flagged {
+  text-align: center;
+  font-weight: normal;
+  font-size: 10px;
+}
+
+/*Checked*/
+.checked {
+  background-color: #b0b0b0;
+  text-align: center;
+}
+
+.valid {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.flagged {
+  text-align: center;
+  font-weight: normal;
+}
+
+.one {
+  color: #1717f8;
+}
+
+.two {
+  color: #3e8937;
+}
+
+.three {
+  color: #f82e27;
+}
+
+.four {
+  color: #29298a;
+}
+
+.five {
+  color: #831f1b;
+}
+
+.six {
+  color: #007c7d;
+}
+
+.seven {
+  color: #000000;
+}
+
+.eight {
+  color: #565656;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+        <meta charset="UTF-8">
+        <meta 
+            name="keywords"
+            content="minesweeper, online, games, game, free, fun, brain, brain games"
+        />
+        <title>Minesweeper</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="body">
+        <!--Minesweeper game content-->
+        <div class="grid">
+            <header class="grid-item" id="grid-header">Minesweeper</header>
+            <aside class="grid-item" id="grid-aside-left">
+                <div id="button-div">
+                    <button class="left-buttons" id="beginner-button">Beginner</button>
+                    <button class="left-buttons" id="intermediate-button" disabled="true">Intermediate</button>
+                    <button class="left-buttons" id="exptert-button" disabled="true">Expert</button>
+                    <button class="left-buttons" id="settings-button" disabled="true">Settings</button>
+                </div>
+            </aside>
+            <main class="grid-item" id="grid-main">
+                <div id="main-header">
+                    <div class="indicators" id="mines">000</div>
+                    <div class="indicators" id="reset"><button class="smiley" id="smiley">🙂</button></div>
+                    <div class="indicators" id="timer">000</div>
+                </div>
+                <div class="gridM" id="gridM">
+                   
+                </div>
+            </main>
+            <aside class="grid-item" id="grid-aside-right"></aside>
+            <footer class="grid-item" id="grid-footer"></footer>
+        </div>
+
+        <script src="app.js"></script>
+       
+
+    </body>
+</html>
