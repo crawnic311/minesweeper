@@ -5,6 +5,7 @@
 //Indicators always display 3 digits
 //Padding between indicator numbers
 //Font looks like timer and digitized
+//Reset
 
 const beginnerBtn = document.getElementById('beginner-button')
 //const intermediateBtn = document.getElementById('intermediate-button')
